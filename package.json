@@ -1,11 +1,8 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "workspaces": [
-    "app"
-  ],
   "scripts": {
-    "lint-quiet": "npm run -ws lint-quiet",
+    "lint-quiet": "cd app && npm run lint-quiet",
     "prepare": "husky"
   },
   "author": "",
