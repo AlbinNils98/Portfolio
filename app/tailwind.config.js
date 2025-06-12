@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'profilePic': "url('/!albion.jpg')",
+      },
+      colors: {
+        nav: "#3d3d6b"
+      }
+    },
   },
   plugins: [],
 }
