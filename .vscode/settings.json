@@ -1,0 +1,31 @@
+{
+  "launch": {
+    "configurations": [],
+    "compounds": [],
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      {
+        "language": "typescript",
+        "autoFix": true
+      },
+      {
+        "language": "typescriptreact",
+        "autoFix": true
+      }
+    ]
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "apps/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "eslint.workingDirectories": [
+    "./app"
+  ]
+}

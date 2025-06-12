@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "workspaces": [
+    "app"
+  ],
+  "scripts": {
+    "lint-quiet": "npm run -ws lint-quiet",
+    "prepare": "husky"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
