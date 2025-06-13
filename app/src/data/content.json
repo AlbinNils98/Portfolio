@@ -1,0 +1,20 @@
+{
+  "pages": [
+  { "name": "About me", "to": "/" },
+  { "name": "Projects", "to": "/projects"}
+  ],
+  "about": {
+    "heroTitle": "Hi i'm Albin Nilsson!",
+    "heroText": "Welcome to my portfolio!\nHere you can get to know me a little and look at what projects i'm working on!"
+  },
+  "projects": {
+    "gameArc": {
+      "title": "GameArc",
+      "text": "Lorem ipsum dolores dei"
+    },
+    "portfolio": {
+      "title": "Portfolio site",
+      "text": "This site!"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import type { NavProps } from '@/components/header/Header';
+import { Colors } from '@/constants/Colors';
 import { useEffect, useRef, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
@@ -30,18 +31,17 @@ const MobileNav: React.FC<NavProps> = ({ navItems }) => {
 
       {isOpen ?
         <>
-          <IoMdClose fill='#FEFEFE' size={54} onClick={toggleOpen} className='cursor-pointer' />
-          <ul ref={dropdownRef} className='flex flex-col gap-4 w-40 items-center absolute top-16 -right-8 bg-nav p-5'>
+          <IoMdClose fill={Colors.light.secondary} size={40} onClick={toggleOpen} className='cursor-pointer' />
+          <ul ref={dropdownRef} className='flex flex-col gap-4 w-40 items-center absolute top-10 -right-8 bg-primary p-5 z-50 animate-slideDown rounded-sm'>
             {navItems.map(({ name, to }) => (
               <li key={to}>
                 <NavLink
                   to={to}
                   end={to === '/'}
                   aria-label={`Link to ${name} page`}
-                  onClick={toggleOpen}
                   className={({ isActive }) =>
-                    'font-bold text-white py-1 px-4 border-2 border-solid ' +
-                    (isActive ? 'border-white' : 'border-transparent')}
+                    'font-bold text-secondary py-1 px-4 border-2 border-solid ' +
+                    (isActive ? 'border-secondary' : 'border-transparent')}
                 >
                   {name}
                 </NavLink>
@@ -49,7 +49,7 @@ const MobileNav: React.FC<NavProps> = ({ navItems }) => {
             ))}
           </ul>
         </> :
-        <GiHamburgerMenu className='cursor-pointer' onClick={toggleOpen} fill='#FEFEFE' size={54} />
+        <GiHamburgerMenu className='cursor-pointer' onClick={toggleOpen} fill={Colors.light.secondary} size={40} />
       }
     </div>
   )

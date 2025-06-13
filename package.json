@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "lint-quiet": "cd app && npm run lint-quiet",
-    "prepare": "husky"
+    "prepare": "husky",
+    "dev": "cd app && npm run dev",
+    "build": "cd app && tsc -b && vite build"
   },
   "author": "",
   "license": "ISC",

@@ -13,8 +13,8 @@ const DesktopNav: React.FC<NavProps> = ({ navItems }) => {
             end={to === '/'}
             aria-label={`Link to ${name} page`}
             className={({ isActive }) =>
-              'font-bold text-white py-1 px-4 border-2 border-solid ' +
-              (isActive ? 'border-white' : 'border-transparent')}
+              'font-bold text-secondary py-1 px-4 border-2 border-solid ' +
+              (isActive ? 'border-secondary' : 'border-transparent')}
           >
             {name}
           </NavLink>
