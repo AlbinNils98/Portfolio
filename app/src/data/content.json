@@ -8,15 +8,15 @@
     "heroText": "Welcome to my portfolio!\nHere you can get to know me a little, follow my developer journey and look at what projects i'm working on!",
     "about": {
       "title": "About me",
-      "text": "Lorem ipsum dolores dei ipsum dolores deiipsum dolores deiipsum dolores deiipsum dolores deiipsum dolores dei"
+      "text": "I am a junior software developer from Örebro, Sweden with a strong foundation in both Java and TypeScript. My main areas of focus include building scalable and responsive applications, with experience in both frontend and backend development.\n\n"
     },
     "school": {
-      "title": "Graduation",
+      "title": "Education",
       "text": "I graduated as a software developer from Lernia YH in may 2025"
     },
     "profession": {
-      "title": "Tech stack",
-      "text": "I am a junior software developer with a strong foundation in both Java and TypeScript. My main areas of focus include building scalable and responsive applications, with experience in both frontend and backend development.\n\nTechnologies I am proficient in:\n\nFrontend:\n- React\n- React Native (Expo)\n- HTML5, CSS3, Tailwind CSS\n\nBackend:\n- Java (Spring Boot)\n- Node.js\n\nOther:\n- REST and GraphQL APIs\n- Git and version control\n- Agile development practices\n- Unit testing and debugging\n\nI am passionate about learning new technologies and continuously improving my development skills through hands-on projects and collaboration."
+      "title": "Technologies",
+      "text": "Technologies I am proficient in:\n\nFrontend:\n- React\n- React Native (Expo)\n- HTML5, CSS3, Tailwind CSS\n\nBackend:\n- Java (Spring Boot)\n- Node.js\n- Next.js\n\nOther:\n- MySQL\n- MongoDB\n- REST and GraphQL APIs\n- Git and version control\n- Agile development practices\n- Unit testing and debugging\n\nI am passionate about learning new technologies and continuously improving my development skills through hands-on projects and collaboration."
     }
   },
   "projects": {
@@ -24,11 +24,14 @@
     "heroText": "On this page you can see some of the projects i am working on right now or have worked on in the past!",
     "gameArc": {
       "title": "GameArc",
-      "text": "GameArc was a fullstack project i worked on as a degree project for my software developer education.\nI am in the process of adding more functionality to it."
+      "text": "GameArc was a fullstack project i worked on as a degree project for my software developer education.\n\nIt is a platform that allows users to search for any game they want, thanks to its integration with the IGDB API. It helps users keep track of, rate, comment on, and archive the games they've played.\nThe application is built with a Spring Boot backend and a React frontend, using a MySQL database to store user data and game activity. User authentication is handled securely through Spring Security, ensuring that only authorized users can access and manage their gaming history. Together, these technologies provide a seamless and secure experience for organizing your personal game archive.\n\nIn addition to developing the application, I also created both the UI design and the system design, giving me hands-on experience in planning and structuring a complete application from both a visual and architectural perspective.\n\nThe project is currently being deployed, with new features and improvements continuously being added.",
+      "github": "https://github.com/AlbinNils98/GameArc",
+      "deployLink": ""
     },
     "portfolio": {
-      "title": "Portfolio site",
-      "text": "This site!"
+      "title": "Portfolio",
+      "text": "This site!\nI'm currently in the process of building this portfolio site to showcase my work and projects. It's being developed using React, with plans to add more features, polish the design, and eventually integrate a backend for managing content.\nThe site is still a work in progress, but it reflects my focus on clean, responsive and accessible interfaces, as well as continuous improvement.",
+    "github": "https://github.com/AlbinNils98/Portfolio"
     }
   }
 }

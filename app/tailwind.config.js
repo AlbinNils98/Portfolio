@@ -12,8 +12,10 @@ export default {
       },
       colors: {
         // primary: "#3d3d6b",
-        primary: "#052e16",
-        secondary: "#f5f5f4",
+        // primary: "#052e16",
+        primary: "#333d29",
+        // secondary: "#f5f5f4",
+        secondary: "#f1faee",
         highlight: "#fde047",
         gaBlue: '#49485C',
       },

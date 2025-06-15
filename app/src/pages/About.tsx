@@ -7,9 +7,9 @@ import { IoIosArrowBack, IoIosArrowForward, IoMdSchool } from 'react-icons/io';
 import { Colors } from '@/constants/Colors';
 import Divider from '@/common/Divider';
 import ContentRow from '@/common/ContentRow';
-import { FaCubesStacked } from 'react-icons/fa6';
 import { BsPersonRaisedHand } from 'react-icons/bs';
 import Hero from '@/common/Hero';
+import { GiMaterialsScience } from 'react-icons/gi';
 
 
 const About = () => {
@@ -30,10 +30,10 @@ const About = () => {
         </NavLink>
         <IoIosArrowBack fill={Colors.light.secondary} size={40} className='animate-rightToLeft' />
       </div>
-      <ContentRow title={content.about.about.title} titleIcon={<BsPersonRaisedHand size={20} />
+      <ContentRow title={content.about.about.title} titleIcon={<BsPersonRaisedHand />
       } text={content.about.about.text} reverse />
       <Divider />
-      <ContentRow title={content.about.profession.title} titleIcon={<FaCubesStacked size={20} />
+      <ContentRow title={content.about.profession.title} titleIcon={<GiMaterialsScience />
       } text={content.about.profession.text} />
       <Divider />
       <ContentRow title={content.about.school.title} titleIcon={<IoMdSchool />

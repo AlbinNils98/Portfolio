@@ -5,10 +5,11 @@ type HeroProps = {
   title1?: string;
   title2?: string;
   children?: ReactNode;
+  full?: boolean;
 }
 
 const Hero: React.FC<HeroProps> = (
-  { title1, title2, children }
+  { title1, title2, children, full = false }
 ) => {
   return (
     <div className='flex relative'>
@@ -26,7 +27,7 @@ const Hero: React.FC<HeroProps> = (
           </h1>}
         </div>
       </div>
-      <div className=' flex w-3/5 items-center justify-center lg:justify-center pt-10 min-h-96 bg-secondary rounded-sm'>
+      <div className={`flex w-3/5 items-center justify-center lg:justify-center pt-10 min-h-96 rounded-sm ${!full && 'bg-secondary'}`}>
         {children}
       </div>
     </div >
