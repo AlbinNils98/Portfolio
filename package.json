@@ -5,7 +5,9 @@
     "lint-quiet": "cd app && npm run lint-quiet",
     "prepare": "husky",
     "dev": "cd app && npm run dev",
-    "build": "cd app && tsc -b && vite build"
+    "build": "cd app && npm run build",
+    "preview": "cd app && npm run preview"
+
   },
   "author": "",
   "license": "ISC",
