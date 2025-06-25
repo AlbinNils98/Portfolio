@@ -24,7 +24,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className='w-full bg-primary flex pt-4 pb-8 px-8 min-h-20 items-center justify-between max-w2xl sm:px-20'>
+    <footer className='w-full bg-primary flex pt-4 pb-8 px-8 min-h-20 items-center justify-between max-w-9xl sm:px-20'>
       <div>
         <ul className='flex gap-4'>
           {socialLinks.map(({ icon: Icon, to, label }, i) => (
