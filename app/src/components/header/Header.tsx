@@ -2,16 +2,16 @@ import ANLogo from '@/assets/icons/AnLogo';
 import DesktopNav from '@/components/header/Desktop';
 import MobileNav from '@/components/header/MobileNav';
 import { Colors } from '@/constants/Colors';
+import { content } from '@/data/content';
 import { NavLink } from 'react-router-dom';
-import Content from '@/data/content.json'
 
 type NavItem = {
-  name: string;
-  to: string;
+  readonly name: string;
+  readonly to: string;
 }
 
 export type NavProps = {
-  navItems: NavItem[]
+  readonly navItems: readonly NavItem[]
 }
 
 const Header = () => {
@@ -23,8 +23,8 @@ const Header = () => {
           <ANLogo size={64} fill={Colors.light.secondary} />
           <h1 className='font-primary text-secondary'>Code</h1>
         </NavLink>
-        <DesktopNav navItems={Content.pages} />
-        <MobileNav navItems={Content.pages} />
+        <DesktopNav navItems={content.pages} />
+        <MobileNav navItems={content.pages} />
       </nav>
     </header>
   )

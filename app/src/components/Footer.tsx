@@ -1,5 +1,5 @@
 import { Colors } from '@/constants/Colors';
-import Content from '@/data/content.json';
+import { content } from '@/data/content';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
 import { MdOutlineEmail } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
@@ -39,7 +39,7 @@ const Footer = () => {
       <div></div>
       <nav>
         <ul className='flex flex-col items-start'>
-          {Content.pages.map(({ name, to }) => (
+          {content.pages.map(({ name, to }) => (
             <li key={to}>
               <NavLink
                 to={to}
