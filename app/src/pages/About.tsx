@@ -1,7 +1,6 @@
 import { titles } from '@/utils/titles';
 import { usePageTitle } from '@/utils/usePageTitle';
 import profilePic from '@/assets/images/profilePic.png'
-import content from '@/data/content.json';
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowBack, IoIosArrowForward, IoMdSchool } from 'react-icons/io';
 import { Colors } from '@/constants/Colors';
@@ -10,11 +9,25 @@ import ContentRow from '@/common/ContentRow';
 import { BsPersonRaisedHand } from 'react-icons/bs';
 import Hero from '@/common/Hero';
 import { GiMaterialsScience } from 'react-icons/gi';
+import { content } from '@/data/content';
 
 
 const About = () => {
 
   usePageTitle(titles.about);
+
+  const getIcon = (title: string) => {
+    switch (title) {
+      case "About me":
+        return <BsPersonRaisedHand />;
+      case "Technologies":
+        return <GiMaterialsScience />;
+      case "Education":
+        return <IoMdSchool />;
+      default:
+        return <></>;
+    }
+  };
   return (
     <>
       <Hero title1={content.about.heroTitle} title2={content.about.heroText}>
@@ -30,14 +43,18 @@ const About = () => {
         </NavLink>
         <IoIosArrowBack fill={Colors.light.secondary} size={40} className='animate-rightToLeft' />
       </div>
-      <ContentRow title={content.about.about.title} titleIcon={<BsPersonRaisedHand />
-      } text={content.about.about.text} reverse />
-      <Divider />
-      <ContentRow title={content.about.profession.title} titleIcon={<GiMaterialsScience />
-      } text={content.about.profession.text} />
-      <Divider />
-      <ContentRow title={content.about.school.title} titleIcon={<IoMdSchool />
-      } text={content.about.school.text} reverse />
+
+      {content.about.about.map((section, index) =>
+        <>
+          <ContentRow
+            title={section.title}
+            titleIcon={getIcon(section.title)}
+            text={section.text}
+            reverse={index % 2 == 0}
+          />
+          <Divider />
+        </>
+      )}
     </>
   )
 }

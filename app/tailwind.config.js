@@ -62,6 +62,10 @@ export default {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(-360deg)' },
         },
+        jump: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10%)' },
+        },
       },
       animation: {
         rightToLeft: 'rightToLeft 1.5s linear infinite',
@@ -72,6 +76,7 @@ export default {
         slideOutUp: 'slideOutUp 0.7s ease-in forwards',
         spinClockwise: 'spinClockwise 10s linear infinite',
         spinCounterClockwise: 'spinCounterClockwise 10s linear infinite',
+        jump: 'jump 0.8s ease-in-out infinite',
       },
     },
   },

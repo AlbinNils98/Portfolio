@@ -2,13 +2,12 @@ import Hero from '@/common/Hero';
 import { titles } from '@/utils/titles';
 import { usePageTitle } from '@/utils/usePageTitle';
 import { FaCog } from 'react-icons/fa';
-import content from '@/data/content.json'
 import ContentRow from '@/common/ContentRow';
 import Divider from '@/common/Divider';
-import gaDiscover from '@/assets/images/gameArc/gameArcDiscover.png'
-import portfolioPage from '@/assets/images/portfolio/portfolio.png'
 import { IoIosArrowForward } from 'react-icons/io';
 import { Colors } from '@/constants/Colors';
+import { content } from '@/data/content';
+import ChipList from '@/common/ChipList';
 
 const Projects = () => {
   usePageTitle(titles.projects)
@@ -24,22 +23,53 @@ const Projects = () => {
         </div>
       </Hero>
       <Divider />
-      <ContentRow title={content.projects.gameArc.title} text={content.projects.gameArc.text} childrenOver>
-        <div className='flex flex-col items-start w-full gap-1 px-2 py-2'>
-          <div className='flex flex-row flex-wrap gap-1'>
-            <img src={gaDiscover} alt="" />
-          </div>
-          <a href={content.projects.gameArc.github} className='font-primary font-bold text-xl border-solid border-black border-b-2 flex items-center'>Github <IoIosArrowForward fill='black' size={16} className='animate-leftToRight' /></a>
-        </div>
-      </ContentRow>
-      <Divider />
-      <ContentRow title={content.projects.portfolio.title} text={content.projects.portfolio.text} childrenOver reverse>
-        <div className='flex flex-col items-start w-full gap-1 px-2 py-2'>
-          <img src={portfolioPage} alt="" className='' />
-          <a href={content.projects.portfolio.github} className='font-primary font-bold text-xl border-solid border-black border-b-2 flex items-center
-          '>Github <IoIosArrowForward fill='black' size={16} className='animate-leftToRight' /></a>
-        </div>
-      </ContentRow>
+      {content.projects.projects.map((project, index) =>
+        <>
+          <ContentRow
+            title={project.title}
+            text={project.text}
+            reverse={index % 2 == 0}
+            childrenOver>
+            <div className='flex flex-col items-start w-full gap-1 p-2'>
+              <div className="flex flex-wrap gap-2 w-full">
+                {project.images.map((imageUrl, index) => (
+                  <img
+                    key={index}
+                    src={imageUrl}
+                    alt={`Image of project named ${project.title}`}
+                    className={`rounded-sm object-fill
+        ${project.images.length === 1
+                        ? "w-full h-auto"
+                        : "flex-auto min-w-[150px] max-w-[450px] h-auto"}
+      `}
+                  />
+                ))}
+              </div>
+              <a href={project.github} aria-label={`Link to ${project.title} github repository`} className='font-primary font-bold text-xl border-solid border-black border-b-2 flex items-center'>Github <IoIosArrowForward fill='black' size={16} className='animate-leftToRight' /></a>
+              {project.deployLink.trim() &&
+                <a href={project.deployLink} aria-label={`Link to ${project.title} deployment`} className='font-primary font-bold text-xl border-solid border-black border-b-2 flex items-center'>Deployment <IoIosArrowForward fill='black' size={16} className='animate-leftToRight' /></a>
+              }
+            </div>
+            {
+              (project.frontEnd.length > 0 || project.backEnd.length > 0) &&
+              <div className='flex flex-col items-start w-full gap-2 p-2 '>
+                {project.frontEnd.length > 0 &&
+                  <div className='w-full'>
+                    <h3 className='font-primary font-bold text-lg'>Frontend</h3>
+                    <ChipList items={project.frontEnd} />
+                  </div>
+                }
+                {project.backEnd.length > 0 &&
+                  <div className='w-full'>
+                    <h3 className='font-primary font-bold text-lg mb-2'>Server</h3>
+                    <ChipList items={project.backEnd} />
+                  </div>
+                }
+              </div>}
+          </ContentRow>
+          <Divider />
+        </>
+      )}
     </>
   )
 }
