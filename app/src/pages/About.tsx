@@ -1,6 +1,5 @@
 import { titles } from '@/utils/titles';
 import { usePageTitle } from '@/utils/usePageTitle';
-import profilePic from '@/assets/images/profilePic.png'
 import { NavLink } from 'react-router-dom';
 import { IoIosArrowBack, IoIosArrowForward, IoMdSchool } from 'react-icons/io';
 import { Colors } from '@/constants/Colors';
@@ -31,7 +30,7 @@ const About = () => {
   return (
     <>
       <Hero title1={content.about.heroTitle} title2={content.about.heroText}>
-        <img src={profilePic} alt="Profile picture of me" className='max-h-96' />
+        <img src="https://res.cloudinary.com/dhzhoadhj/image/upload/v1760183750/profilePic_s819jc.png" alt="Profile picture of me" className='max-h-96' />
       </Hero>
       <div className='flex items-center justify-center bg-primary p-8 max-h-[500px] gap-1'>
         <IoIosArrowForward fill={Colors.light.secondary} size={40} className='animate-leftToRight' />
