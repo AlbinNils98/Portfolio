@@ -76,7 +76,7 @@ export default {
         slideOutUp: 'slideOutUp 0.7s ease-in forwards',
         spinClockwise: 'spinClockwise 10s linear infinite',
         spinCounterClockwise: 'spinCounterClockwise 10s linear infinite',
-        jump: 'jump 0.8s ease-in-out infinite',
+        jump: 'jump 0.4s ease-in-out forwards',
       },
     },
   },
