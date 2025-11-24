@@ -45,11 +45,11 @@ export const content: Content = {
       },
       {
         title: "Restaurant Booking Demo",
-        text: "Restaurant Booking Demo is a project i built to showcase my skills in React, GraphQL, and TypeScript, while also exploring business models.\nCustomers can easily browse menus and book tables at their chosen restaurants, and staff can manage menus, restaurant information, and table reservations through an admin interface.\n\nThe backend is powered by Node.js, Express, and GraphQL (Yoga), with MongoDB for data storage, JWT cookie authentication, and Nodemailer for notifications.\nThe frontend uses React with Apollo Client and Codegen, providing full type safety across the frontend and backend for reliable GraphQL interactions. It also leverages Material UI to create a polished, responsive user interface.",
+        text: "Restaurant Booking Demo is a project i built to showcase my skills in React, GraphQL, and TypeScript, while also exploring business models.\nCustomers can easily browse menus and book tables at their chosen restaurants, and staff can manage menus, restaurant information, and table reservations through an admin interface.\n\nThe backend is powered by Node.js, Express, and GraphQL (Yoga), with MongoDB for data storage, JWT cookie authentication, and mailersend API for notifications.\nThe frontend uses React with Apollo Client and Codegen, providing full type safety across the frontend and backend for reliable GraphQL interactions. It also leverages Material UI to create a polished, responsive user interface.\n\nIf you want to try out the admin interface, go to /login and use the following credentials:\n email: albin@example.com\npassword: password\n\nGo ahead and play around with the menus, tables, reservations, and restaurants — I can always reset the data.",
         frontEnd: ["TypeScript", "React", "Material UI", "Apollo"],
         backEnd: ["TypeScript", "Node.js", "Express", "GraphQL", "MongoDB"],
         github: "https://github.com/AlbinNils98/restaurant-booking-demo",
-        deployLink: "",
+        deployLink: "https://restaurant-booking-demo.vercel.app",
         images: ["https://res.cloudinary.com/dhzhoadhj/image/upload/v1760175826/rbd-main_vve5gx.png",
           "https://res.cloudinary.com/dhzhoadhj/image/upload/v1760175826/rbd-dark_ypmnif.png",
           "https://res.cloudinary.com/dhzhoadhj/image/upload/v1760175827/rbd-menu_jlfblc.png",
